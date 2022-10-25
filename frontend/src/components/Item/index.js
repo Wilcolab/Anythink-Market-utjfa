@@ -4,7 +4,7 @@ import React from "react";
 import agent from "../../agent";
 import { connect } from "react-redux";
 import marked from "marked";
-import placeholder from "../../imgs/placeholder.png"
+import placeholder from "../../imgs/placeholder.png";
 import {
   ITEM_PAGE_LOADED,
   ITEM_PAGE_UNLOADED,
@@ -51,7 +51,9 @@ class Item extends React.Component {
           <div className="row bg-white p-4">
             <div className="col-6">
               <img
-                src={this.props.item.image ? this.props.item.image : placeholder}
+                src={
+                  this.props.item.image ? this.props.item.image : placeholder
+                }
                 alt={this.props.item.title}
                 className="item-img"
                 style={{ height: "500px", width: "100%", borderRadius: "6px" }}
