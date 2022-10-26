@@ -1,4 +1,5 @@
 from email.mime import image
+
 from typing import List, Optional, Sequence, Union
 
 from asyncpg import Connection, Record
@@ -40,7 +41,7 @@ class ItemsRepository(BaseRepository):  # noqa: WPS214
         description: str,
         seller: User,
         body: Optional[str] = None,
-        image: str,
+        image: Optional[str] = 'placeholder.png',
         tags: Optional[Sequence[str]] = None,
     ) -> Item:
         async with self.connection.transaction():
